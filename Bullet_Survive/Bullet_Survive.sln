@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityEngine.UI", "UnityEngine.UI.csproj", "{D67924B0-26E9-5C5A-6999-2CA61375889B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{7875BF6F-DF85-92B8-EFB8-45D23AB48024}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Tilemap.Editor", "Unity.2D.Tilemap.Editor.csproj", "{93EB8321-44DA-8062-F42E-E15550005EC0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Sprite.Editor", "Unity.2D.Sprite.Editor.csproj", "{A9B7F2BE-B58B-A5E4-B1A6-82424919F967}"
@@ -19,6 +21,10 @@ Global
 		{D67924B0-26E9-5C5A-6999-2CA61375889B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D67924B0-26E9-5C5A-6999-2CA61375889B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D67924B0-26E9-5C5A-6999-2CA61375889B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7875BF6F-DF85-92B8-EFB8-45D23AB48024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7875BF6F-DF85-92B8-EFB8-45D23AB48024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7875BF6F-DF85-92B8-EFB8-45D23AB48024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7875BF6F-DF85-92B8-EFB8-45D23AB48024}.Release|Any CPU.Build.0 = Release|Any CPU
 		{93EB8321-44DA-8062-F42E-E15550005EC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{93EB8321-44DA-8062-F42E-E15550005EC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93EB8321-44DA-8062-F42E-E15550005EC0}.Release|Any CPU.ActiveCfg = Release|Any CPU

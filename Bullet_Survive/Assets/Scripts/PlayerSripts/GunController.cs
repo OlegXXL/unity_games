@@ -8,7 +8,6 @@ using UnityEngine.WSA;
 public class GunController : MonoBehaviour
 {
     [SerializeField] private float overchargeTime = 1;
-    [SerializeField] private float damage = 10;
     [SerializeField] private float rotationSpeed = 1;
     [SerializeField] private GameObject bullet;
     private GameObject[] enemies;

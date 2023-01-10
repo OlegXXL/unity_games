@@ -18,12 +18,6 @@ public class PlayerController : MonoBehaviour
       rigidbody = gameObject.GetComponent<Rigidbody2D>();
    }
 
-   private void Update()
-   {
-      if (health > 0) return;
-      Destroy(gameObject);
-   }
-
    private void FixedUpdate()
    {
       if (health < 0) health = 0;

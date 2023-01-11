@@ -63,6 +63,7 @@ public class SwipeLevels : MonoBehaviour
             {
                 Debug.LogWarning("Current Selected Level" + i);
                 currentSelectedLevel = i;
+                Debug.Log(imageContent.transform.GetChild(i).name);
                 transform.GetChild(i).localScale = Vector2.Lerp(transform.GetChild(i).localScale, new Vector2(1f, 1f), 0.1f);
                 imageContent.transform.GetChild(i).localScale = Vector2.Lerp(imageContent.transform.GetChild(i).localScale, new Vector2(1.2f, 1.2f), 0.1f);
                 imageContent.transform.GetChild(i).GetComponent<Image>().color = colors[1];

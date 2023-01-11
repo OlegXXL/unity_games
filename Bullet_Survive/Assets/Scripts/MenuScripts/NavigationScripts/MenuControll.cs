@@ -177,6 +177,7 @@ public class MenuControll : MonoBehaviour
     {
         swipeLevels.GetSelectedLevel();
         int currentLevelNumber = GameData.CurrentLevel;
+        Debug.Log(currentLevelNumber);
         iconLevel_btn.GetComponent<Image>().sprite = ContentWithLevels.transform.GetChild(currentLevelNumber).GetComponent<Image>().sprite;
         selectedLevel_UI.SetActive(false);
     }

@@ -74,7 +74,7 @@
     <Compile Include="Assets\Scripts\Advertisement\AdsListener.cs" />
     <Compile Include="Assets\Scripts\GameData.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
-    <Compile Include="Assets\Scripts\swipe.cs" />
+    <Compile Include="Assets\Scripts\SwipeLevels.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Scripts\PlayerSripts\GunController.cs" />
     <Compile Include="Assets\Scripts\PlayerSripts\PlayerController.cs" />

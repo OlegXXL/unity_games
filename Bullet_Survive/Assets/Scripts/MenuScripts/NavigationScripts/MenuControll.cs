@@ -24,6 +24,11 @@ public class MenuControll : MonoBehaviour
     [SerializeField] private GameObject energy_UI;
     [SerializeField] private GameObject selectedLevel_UI;
 
+    [Header("Buttons Up Panel")]
+    [SerializeField] private Button energy_btn;
+    [SerializeField] private Button crystal_btn;
+    [SerializeField] private Button gold_btn;
+
     [Header("ButtonsMenu")]
     [SerializeField] private Button shop_btn;
     [SerializeField] private Button home_btn;
@@ -72,6 +77,16 @@ public class MenuControll : MonoBehaviour
     private void Start()
     {
         #region [ Button Settings ]
+        energy_btn.onClick.RemoveAllListeners();
+        energy_btn.onClick.AddListener(SelectLevel);
+
+        crystal_btn.onClick.RemoveAllListeners();
+        crystal_btn.onClick.AddListener(delegate { currentStatus = StatusMenu.inShop; });
+        crystal_btn.onClick.AddListener(updateStatusMenu);
+
+        gold_btn.onClick.RemoveAllListeners();
+        gold_btn.onClick.AddListener(delegate { currentStatus = StatusMenu.inShop; });
+        gold_btn.onClick.AddListener(updateStatusMenu);
 
         selectLevel_btn.onClick.RemoveAllListeners();
         selectLevel_btn.onClick.AddListener(SelectLevel);

@@ -329,13 +329,13 @@
 -r:"/Applications/Unity/Hub/Editor/2022.1.20f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netstandard/System.Xml.XPath.XDocument.dll"
 -r:"/Applications/Unity/Hub/Editor/2022.1.20f1/Unity.app/Contents/NetStandard/Extensions/2.0.0/System.Runtime.InteropServices.WindowsRuntime.dll"
 -r:"/Applications/Unity/Hub/Editor/2022.1.20f1/Unity.app/Contents/NetStandard/ref/2.1.0/netstandard.dll"
--r:"/Users/andrii_bartis/my_unity_games/unity_games/Bullet_Survive/Library/PackageCache/com.unity.burst@1.7.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll"
--r:"/Users/andrii_bartis/my_unity_games/unity_games/Bullet_Survive/Library/PackageCache/com.unity.burst@1.7.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll"
--r:"/Users/andrii_bartis/my_unity_games/unity_games/Bullet_Survive/Library/PackageCache/com.unity.burst@1.7.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll"
--r:"/Users/andrii_bartis/my_unity_games/unity_games/Bullet_Survive/Library/PackageCache/com.unity.burst@1.7.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll"
--r:"/Users/andrii_bartis/my_unity_games/unity_games/Bullet_Survive/Library/PackageCache/com.unity.burst@1.7.4/Unity.Burst.Unsafe.dll"
--r:"/Users/andrii_bartis/my_unity_games/unity_games/Bullet_Survive/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
--r:"/Users/andrii_bartis/my_unity_games/unity_games/Bullet_Survive/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/PackageCache/com.unity.burst@1.7.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll"
+-r:"/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/PackageCache/com.unity.burst@1.7.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll"
+-r:"/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/PackageCache/com.unity.burst@1.7.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll"
+-r:"/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/PackageCache/com.unity.burst@1.7.4/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll"
+-r:"/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/PackageCache/com.unity.burst@1.7.4/Unity.Burst.Unsafe.dll"
+-r:"/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
+-r:"/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/900b0aE.dag/PsdPlugin.ref.dll"
 -r:"Library/Bee/artifacts/900b0aE.dag/Unity.2D.Animation.Editor.ref.dll"
 -r:"Library/Bee/artifacts/900b0aE.dag/Unity.2D.Animation.Runtime.ref.dll"
@@ -395,6 +395,7 @@
 "Assets/Scripts/PlayerSripts/BulletController.cs"
 "Assets/Scripts/PlayerSripts/GunController.cs"
 "Assets/Scripts/PlayerSripts/PlayerController.cs"
+"Assets/Scripts/ProgressBar/ProgressBarController.cs"
 -langversion:9.0
 
 /deterministic

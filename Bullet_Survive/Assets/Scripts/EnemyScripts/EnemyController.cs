@@ -17,6 +17,7 @@ public class EnemyController : MonoBehaviour
     private void Start()
     {
         rigidbody = gameObject.GetComponent<Rigidbody2D>();
+        rigidbody.freezeRotation = true;
         target = GameObject.FindGameObjectsWithTag("Player")[0].transform;
         InvokeRepeating("GiveDamage", 0, 1);
     }
@@ -35,6 +36,11 @@ public class EnemyController : MonoBehaviour
     {
         if (!target) return;
         rigidbody.velocity = new Vector2(moveDirection.x, moveDirection.y) * moveSpeed;
+    }
+
+    private void LateUpdate()
+    {
+        transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
     private void GiveDamage()

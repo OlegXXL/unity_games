@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
    public float health = 100;
-   [SerializeField] private FixedJoystick joystick;
+   [SerializeField] private DynamicJoystick joystick;
    [SerializeField] private float moveSpeed = 5;
    private Rigidbody2D rigidbody;
    private GameObject progressBar;
@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
    {
       progressBar = GameObject.Find("ProgressBar");
       rigidbody = gameObject.GetComponent<Rigidbody2D>();
+      rigidbody.freezeRotation = true;
    }
 
    private void Update()

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class swipe : MonoBehaviour
+public class SwipeLevels : MonoBehaviour
 {
     public Color[] colors;
     public GameObject scrollbar, imageContent;
@@ -13,6 +13,11 @@ public class swipe : MonoBehaviour
     private float time;
     private Button takeTheBtn;
     int btnNumber;
+    private int currentSelectedLevel;
+    private void Awake()
+    {
+        currentSelectedLevel = GameData.CurrentLevel;
+    }
 
     void Update()
     {
@@ -51,12 +56,13 @@ public class swipe : MonoBehaviour
             }
         }
 
-
+        
         for (int i = 0; i < pos.Length; i++)
         {
             if (scroll_pos < pos[i] + (distance / 2) && scroll_pos > pos[i] - (distance / 2))
             {
                 Debug.LogWarning("Current Selected Level" + i);
+                currentSelectedLevel = i;
                 transform.GetChild(i).localScale = Vector2.Lerp(transform.GetChild(i).localScale, new Vector2(1f, 1f), 0.1f);
                 imageContent.transform.GetChild(i).localScale = Vector2.Lerp(imageContent.transform.GetChild(i).localScale, new Vector2(1.2f, 1.2f), 0.1f);
                 imageContent.transform.GetChild(i).GetComponent<Image>().color = colors[1];
@@ -73,6 +79,10 @@ public class swipe : MonoBehaviour
         }
 
 
+    }
+    public void GetSelectedLevel()
+    {
+        GameData.CurrentLevel = currentSelectedLevel;
     }
 
     private void GecisiDuzenle(float distance, float[] pos, Button btn)

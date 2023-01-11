@@ -15,10 +15,14 @@ enum StatusMenu
 }
 public class MenuControll : MonoBehaviour
 {
+    public SwipeLevels swipeLevels;
+    [SerializeField] private GameObject ContentWithLevels; //for find child image
+
     [SerializeField] private GameObject animatorLoadScene;
     [SerializeField] private GameObject shop_UI;
     [SerializeField] private GameObject home_UI;
     [SerializeField] private GameObject energy_UI;
+    [SerializeField] private GameObject selectedLevel_UI;
 
     [Header("ButtonsMenu")]
     [SerializeField] private Button shop_btn;
@@ -26,6 +30,9 @@ public class MenuControll : MonoBehaviour
     [SerializeField] private Button third_btn;
     [SerializeField] private Button four_btn;
     [SerializeField] private Button start_btn;
+    [SerializeField] private Button iconLevel_btn;
+    [SerializeField] private Button selectLevel_btn;
+    [SerializeField] private Button closeSelected_UI_btn;
 
     [Header("Particles")]
     [SerializeField] private ParticleSystem gold_prtc;
@@ -64,7 +71,16 @@ public class MenuControll : MonoBehaviour
     }
     private void Start()
     {
-        
+        #region [ Button Settings ]
+
+        selectLevel_btn.onClick.RemoveAllListeners();
+        selectLevel_btn.onClick.AddListener(SelectLevel);
+
+        closeSelected_UI_btn.onClick.RemoveAllListeners();
+        closeSelected_UI_btn.onClick.AddListener(CloseLevelSelect);
+
+        iconLevel_btn.onClick.RemoveAllListeners();
+        iconLevel_btn.onClick.AddListener(OpenSelectedLevels);
 
         shop_btn.onClick.RemoveAllListeners();
         shop_btn.onClick.AddListener(delegate { currentStatus = StatusMenu.inShop; });
@@ -83,8 +99,8 @@ public class MenuControll : MonoBehaviour
         four_btn.onClick.AddListener(updateStatusMenu);
 
         start_btn.onClick.RemoveAllListeners();
-        start_btn.onClick.AddListener(delegate { currentStatus = StatusMenu.inFour; });
         start_btn.onClick.AddListener(LoadLevel);
+        #endregion
     }
     private void AnimationButtonIcon(GameObject icon_btn) //single animation for multyply buttons
     {
@@ -134,5 +150,19 @@ public class MenuControll : MonoBehaviour
         }
 
     }
-
+    private void OpenSelectedLevels()
+    {
+        selectedLevel_UI.SetActive(true);
+    }
+    private void CloseLevelSelect()
+    {
+        selectedLevel_UI.SetActive(false);
+    }
+    private void SelectLevel()
+    {
+        swipeLevels.GetSelectedLevel();
+        int currentLevelNumber = GameData.CurrentLevel;
+        iconLevel_btn.GetComponent<Image>().sprite = ContentWithLevels.transform.GetChild(currentLevelNumber).GetComponent<Image>().sprite;
+        selectedLevel_UI.SetActive(false);
+    }
 }

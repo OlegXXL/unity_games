@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6fbf7578-85df-b892-efb8-45d23ab48024}</ProjectGuid>
+    <ProjectGuid>{6e77624f-7bf4-fe47-d3f3-51b4b8d1b7fb}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -36,28 +36,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/Scripts/CurrencyControll.cs" />
-     <Compile Include="Assets/Joystick Pack/Scripts/Joysticks/FixedJoystick.cs" />
-     <Compile Include="Assets/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs" />
-     <Compile Include="Assets/Scripts/NavigationScripts/MenuControll.cs" />
-     <Compile Include="Assets/Scripts/CameraScripts/CameraFollow.cs" />
-     <Compile Include="Assets/SavingSystem/JsonSavingSystem.cs" />
-     <Compile Include="Assets/Scripts/Advertisement/Purchases.cs" />
-     <Compile Include="Assets/SavingSystem/IDataSaver.cs" />
-     <Compile Include="Assets/Scripts/PlayerSripts/BulletController.cs" />
-     <Compile Include="Assets/Joystick Pack/Examples/JoystickPlayerExample.cs" />
-     <Compile Include="Assets/Joystick Pack/Scripts/Joysticks/DynamicJoystick.cs" />
-     <Compile Include="Assets/Joystick Pack/Scripts/Base/Joystick.cs" />
-     <Compile Include="Assets/Scripts/Advertisement/Ads.cs" />
-     <Compile Include="Assets/Scripts/GameControll.cs" />
-     <Compile Include="Assets/Scripts/EnemyScripts/EnemyController.cs" />
-     <Compile Include="Assets/Scripts/Advertisement/AdsListener.cs" />
-     <Compile Include="Assets/Scripts/GameData.cs" />
-     <Compile Include="Assets/Joystick Pack/Examples/JoystickSetterExample.cs" />
-     <Compile Include="Assets/Scripts/SwipeLevels.cs" />
-     <Compile Include="Assets/Joystick Pack/Scripts/Joysticks/FloatingJoystick.cs" />
-     <Compile Include="Assets/Scripts/PlayerSripts/GunController.cs" />
-     <Compile Include="Assets/Scripts/PlayerSripts/PlayerController.cs" />
+     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs" />
+     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs" />
+     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleEPOOutline.cs" />
+     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs" />
+     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs" />
+     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs" />
+     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" />
+     <Compile Include="Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs" />
+     <None Include="Assets/Plugins/Demigiant/DOTween/readme.txt" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Hub/Editor/2022.1.20f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -754,45 +741,8 @@
     <Reference Include="Unity.VisualScripting.Core">
         <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Advertisements.Editor">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEngine.Advertisements.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Purchasing.Common">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Purchasing.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing.SecurityStub">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityStub.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Services.Analytics.Editor">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.Services.Analytics.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing.SecurityCore">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityCore.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing.Stores">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEngine.Purchasing.Stores.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing.Codeless">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEngine.Purchasing.Codeless.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Services.Analytics">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.Services.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.Purchasing">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{6e77624f-7bf4-fe47-d3f3-51b4b8d1b7fb}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

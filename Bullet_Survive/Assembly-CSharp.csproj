@@ -307,11 +307,11 @@
     <Reference Include="DOTween">
         <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
         <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
         <HintPath>/Applications/Unity/Hub/Editor/2022.1.20f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -694,26 +694,20 @@
     <Reference Include="Unity.VisualScripting.Flow.Editor">
         <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Purchasing.Common">
+        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Purchasing.Common.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Services.Core.Analytics">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.Services.Core.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Shared.Editor">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
+    <Reference Include="UnityEngine.Purchasing">
+        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
         <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Services.Core.Environments">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.Services.Core.Environments.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
         <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
         <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
@@ -724,11 +718,23 @@
     <Reference Include="Unity.TextMeshPro">
         <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Purchasing.SecurityStub">
+        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityStub.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
         <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
         <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Analytics">
+        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.Services.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Analytics.Editor">
+        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.Services.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
         <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
@@ -745,47 +751,41 @@
     <Reference Include="UnityEngine.UI">
         <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Services.Core">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.Services.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Core">
         <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Advertisements">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
+    <Reference Include="Unity.Services.Core">
+        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.Services.Core.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Advertisements.Editor">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEngine.Advertisements.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Purchasing.Common">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Purchasing.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.Purchasing.SecurityStub">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityStub.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Services.Analytics.Editor">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.Services.Analytics.Editor.dll</HintPath>
+    <Reference Include="Unity.Services.Core.Analytics">
+        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.Services.Core.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.SecurityCore">
         <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityCore.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Purchasing.Stores">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEngine.Purchasing.Stores.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.Purchasing.Codeless">
         <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEngine.Purchasing.Codeless.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Services.Analytics">
-        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.Services.Analytics.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.Shared.Editor">
+        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Services.Core.Environments">
+        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.Services.Core.Environments.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing.Stores">
+        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEngine.Purchasing.Stores.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
         <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements.Editor">
+        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/UnityEngine.Advertisements.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.State">
+        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

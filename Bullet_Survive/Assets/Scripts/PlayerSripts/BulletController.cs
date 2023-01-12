@@ -22,7 +22,7 @@ public class BulletController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("before");
-        if (!collision.gameObject.CompareTag("Enemy")) return;
+        if (!collision.gameObject.CompareTag("Enemy") && !collision.gameObject.CompareTag("Boss")) return;
         Debug.Log("after");
 
         var enemy = collision.gameObject.GetComponent<EnemyController>();

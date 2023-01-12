@@ -11,7 +11,7 @@ public class GunController : MonoBehaviour
     [SerializeField] private float damage = 10;
     [SerializeField] private float rotationSpeed = 1;
     [SerializeField] private GameObject bullet;
-    private GameObject[] enemies;
+    private List<GameObject> enemies;
 
     private void Start()
     {
@@ -20,7 +20,16 @@ public class GunController : MonoBehaviour
 
     void Update()
     {
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        var enemiesArray = GameObject.FindGameObjectsWithTag("Enemy");
+        var boss = GameObject.FindGameObjectWithTag("Boss");
+
+        if (enemiesArray.Length == 0 && !boss) return;
+        if (enemiesArray.Length == 0) enemies = new List<GameObject>();
+        else enemies = new List<GameObject>(enemiesArray);
+        Debug.Log(enemies.ToString());
+        
+        if (boss) enemies.Add(boss);
+
         var distance = Mathf.Infinity;
         var targetPosition = transform.position;
         foreach (var enemy in enemies)

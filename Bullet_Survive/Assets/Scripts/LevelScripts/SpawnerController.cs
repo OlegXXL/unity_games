@@ -8,25 +8,42 @@ public class SpawnerController : MonoBehaviour
     [SerializeField] private int[] trashCount;
     [SerializeField] private GameObject enemy;
     [SerializeField] private float repeatRate;
+    [SerializeField] private GameObject boss;
     void Start()
     {
         Vector3 position;
-        GameObject tempForSpawn;
+        GameObject trashForSpawn;
         
         for (int i = 0; i < trash.Length; i++) 
         {
             for (int j = 0; j < trashCount[i]; j++)
             {
                 position = new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f));
-                tempForSpawn = trash[i];
-                Instantiate(tempForSpawn, position, Quaternion.identity);
-                tempForSpawn.transform.SetParent(transform);
+                trashForSpawn = trash[i];
+                var tempTrash = Instantiate(trashForSpawn, position, Quaternion.identity);
+                tempTrash.transform.SetParent(transform);
             } 
         }
 
         InvokeRepeating("SpawnEnemy", 0, repeatRate);
     }
 
+    bool isBossSpawned = false;
+    void Update()
+    {
+        if (ProgressBarController.progress >= 100  && !isBossSpawned)
+        {
+            SpawnBoss();
+            isBossSpawned = true;
+        }
+    }
+
+    void SpawnBoss()
+    {
+        var position = new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f));
+        var tempBoss = Instantiate(boss, position, Quaternion.identity);
+        tempBoss.transform.SetParent(transform); 
+    }
     void SpawnEnemy()
     {
         if (ProgressBarController.progress >= 100) return;

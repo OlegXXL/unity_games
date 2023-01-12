@@ -29,6 +29,7 @@ public class EnemyController : MonoBehaviour
         rigidbody.rotation = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
         
         if (health > 0) return;
+        PlayerPrefs.SetInt("LevelDeathCount", PlayerPrefs.GetInt("LevelDeathCount") + 1);
         Destroy(gameObject);
     }
 

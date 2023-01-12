@@ -6,6 +6,8 @@ public class SpawnerController : MonoBehaviour
 {
     [SerializeField] private GameObject[] trash;
     [SerializeField] private int[] trashCount;
+    [SerializeField] private GameObject enemy;
+    [SerializeField] private float repeatRate;
     void Start()
     {
         Vector3 position;
@@ -21,10 +23,16 @@ public class SpawnerController : MonoBehaviour
                 tempForSpawn.transform.SetParent(transform);
             } 
         }
+
+        InvokeRepeating("SpawnEnemy", 0, repeatRate);
     }
 
-    void Update()
+    void SpawnEnemy()
     {
+        if (ProgressBarController.progress >= 100) return;
         
+        var position = new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f));
+        var tempEnemy = Instantiate(enemy, position, Quaternion.identity);
+        tempEnemy.transform.SetParent(transform);
     }
 }

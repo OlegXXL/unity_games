@@ -553,7 +553,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c205eb2130fd716428f260fd9cb717de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeText: {fileID: 0}
 --- !u!4 &381922000
 Transform:
   m_ObjectHideFlags: 0
@@ -580,6 +579,7 @@ GameObject:
   - component: {fileID: 873225840}
   - component: {fileID: 873225843}
   - component: {fileID: 873225842}
+  - component: {fileID: 873225844}
   m_Layer: 5
   m_Name: BossBar
   m_TagString: Untagged
@@ -646,6 +646,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873225839}
   m_CullTransparentMesh: 1
+--- !u!114 &873225844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873225839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16ba3ff1457c04a85bbeb565e5a011c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxWidth: 742
+  boss: {fileID: 0}
 --- !u!4 &979428645 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2106004825859882066, guid: 7447154ad841144b98cf679798696765, type: 3}
@@ -1080,7 +1094,8 @@ MonoBehaviour:
   - {fileID: 4789524971266554721, guid: b6caebcc93b8243e39ec9033109c25a8, type: 3}
   trashCount: 03000000050000000a0000000f000000
   enemy: {fileID: 8562802278197441815, guid: 2999e7d36952b4cb3b28a81417e538fe, type: 3}
-  repeatRate: 1
+  repeatRate: 5
+  boss: {fileID: 6305787123849531018, guid: 7c10b96f06c8d4279aa66876f5f88de7, type: 3}
 --- !u!1 &1368738601
 GameObject:
   m_ObjectHideFlags: 0
@@ -2138,7 +2153,7 @@ GameObject:
   - component: {fileID: 1785308466}
   - component: {fileID: 1785308465}
   m_Layer: 5
-  m_Name: Line
+  m_Name: BossHealthLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

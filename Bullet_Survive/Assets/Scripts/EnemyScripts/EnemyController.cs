@@ -6,6 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
 public class EnemyController : MonoBehaviour
 {
+    public float maxHealth = 100;
     public float health = 100;
     [SerializeField] private float moveSpeed = 5;
     [SerializeField] private float damage = 10;

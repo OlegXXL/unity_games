@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: a5a64242859f42f4a8184c50c26c8729
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: win-menu_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 2438
+        width: 554
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20639fb9b98e57c43afa2ac82314d4cf
+      internalID: -1526065436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: win-menu_4
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 2595
+        width: 555
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31ba127f87ab97f4288dffb2ce237c38
+      internalID: -450058591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: win-menu_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1165
+        width: 1309
+        height: 1142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6a211e376bb124b9a9adeecfd919b4
+      internalID: -1325545151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: win-menu_18
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 537
+        width: 290
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 938d192f7efe7914a92203dd755b8fdc
+      internalID: 805040983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: win-menu_28
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 766
+        width: 97
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b3b16bb0f2682943a80c3fc4bd285b7
+      internalID: 608935397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: win-menu_34
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 666
+        width: 507
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b763801a46f4c7e45b6fb6fb2a142024
+      internalID: -2085393280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: win-menu_49
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 623
+        width: 93
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f9dc0b66fd730e4daae9e9fa5d9f54d
+      internalID: -406275939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: win-menu_65
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 472
+        width: 101
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a4575f5059aecf4abcb7371dffab358
+      internalID: -1669661167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: win-menu_69
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 338
+        width: 534
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a42fc0b206679e45af8b43e0be5ee25
+      internalID: -1246325963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: win-menu_86
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 75
+        width: 299
+        height: 396
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad15bb4f5757314aac5a6bc0068f33f
+      internalID: -1272542904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: win-menu_92
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 305
+        width: 93
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b203e4b7ae2cd044b060c3553e593e6
+      internalID: -1679711039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: win-menu_110
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 149
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 949d0aa90da40f1419bc05dcb7c06669
+      internalID: 955967627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: win-menu_123
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 0
+        width: 533
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65448802d1e584547b4891427290e9d5
+      internalID: -820239561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      win-menu_80: 21052339
+      win-menu_78: -1667241063
+      win-menu_123: -820239561
+      win-menu_98: -1845650927
+      win-menu_118: 1083534947
+      win-menu_27: 859691710
+      win-menu_100: 1645937211
+      win-menu_108: 2039999122
+      win-menu_111: 442114238
+      win-menu_77: 1236992677
+      win-menu_1: 277612604
+      win-menu_55: 1690318466
+      win-menu_22: 692531165
+      win-menu_40: -358548993
+      win-menu_64: -206040750
+      win-menu_99: 1441142642
+      win-menu_97: -1721845142
+      win-menu_20: 1843557884
+      win-menu_41: 1515592520
+      win-menu_63: -523285636
+      win-menu_3: -492974038
+      win-menu_69: -1246325963
+      win-menu_120: 571432758
+      win-menu_122: 821507064
+      win-menu_15: 1162528712
+      win-menu_124: 748198152
+      win-menu_113: -513500768
+      win-menu_13: -1553137683
+      win-menu_85: 603855111
+      win-menu_103: -1759462378
+      win-menu_105: -849074977
+      win-menu_95: -1261928661
+      win-menu_116: -807877398
+      win-menu_34: -2085393280
+      win-menu_8: -1325545151
+      win-menu_39: 1077529092
+      win-menu_7: 786520181
+      win-menu_21: 1385940744
+      win-menu_32: -1610955771
+      win-menu_91: -643242586
+      win-menu_26: -1951934580
+      win-menu_5: -1144371139
+      win-menu_23: -1373893126
+      win-menu_51: 568609518
+      win-menu_73: 235373797
+      win-menu_76: 1508045915
+      win-menu_106: -1470958368
+      win-menu_9: -89921742
+      win-menu_25: -979971448
+      win-menu_88: -1525570374
+      win-menu_30: 1865420656
+      win-menu_14: -1734736513
+      win-menu_16: 18060437
+      win-menu_35: -71921589
+      win-menu_65: -1669661167
+      win-menu_53: 675162428
+      win-menu_38: -1471706429
+      win-menu_79: -7544737
+      win-menu_29: -248274771
+      win-menu_112: -1883180528
+      win-menu_75: -1018014440
+      win-menu_12: 1452842458
+      win-menu_121: 156199569
+      win-menu_66: 463336854
+      win-menu_70: 2131040846
+      win-menu_43: -1858190572
+      win-menu_0: -1526065436
+      win-menu_4: -450058591
+      win-menu_96: -568664947
+      win-menu_6: -1421149693
+      win-menu_74: 1251304853
+      win-menu_45: -897066717
+      win-menu_94: 1134689638
+      win-menu_47: 546495238
+      win-menu_101: 1049616769
+      win-menu_17: 1080290869
+      win-menu_48: -1040166306
+      win-menu_57: -658163361
+      win-menu_61: -1884191754
+      win-menu_107: -115578962
+      win-menu_10: -880667355
+      win-menu_2: 1108383165
+      win-menu_42: -35159017
+      win-menu_18: 805040983
+      win-menu_93: -660001812
+      win-menu_19: -117634054
+      win-menu_54: 906623065
+      win-menu_62: -1453387726
+      win-menu_11: -753424504
+      win-menu_44: 1616443440
+      win-menu_50: -2077053330
+      win-menu_115: -1874353736
+      win-menu_59: 1341116188
+      win-menu_28: 608935397
+      win-menu_56: 2048759087
+      win-menu_119: 2094999928
+      win-menu_46: -505810095
+      win-menu_92: -1679711039
+      win-menu_81: -426949607
+      win-menu_67: 2027454448
+      win-menu_90: -2097238019
+      win-menu_83: -1240695244
+      win-menu_68: 588587944
+      win-menu_87: 905024132
+      win-menu_33: -1602267061
+      win-menu_58: 865434930
+      win-menu_52: -1677918787
+      win-menu_104: -897053515
+      win-menu_102: -1753248198
+      win-menu_24: -1124397551
+      win-menu_82: 1378965356
+      win-menu_114: 1343207047
+      win-menu_71: -608016593
+      win-menu_86: -1272542904
+      win-menu_110: 955967627
+      win-menu_84: -397145134
+      win-menu_37: 1906991054
+      win-menu_60: 1109443929
+      win-menu_109: -1539429115
+      win-menu_72: -1386889090
+      win-menu_36: -69176216
+      win-menu_117: -896883389
+      win-menu_89: 997452202
+      win-menu_31: -1860239376
+      win-menu_49: -406275939
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

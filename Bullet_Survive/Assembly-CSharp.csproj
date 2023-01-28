@@ -62,6 +62,8 @@
      <Compile Include="Assets/Scripts/UIScripts/DeathCounterController.cs" />
      <Compile Include="Assets/Scripts/PlayerSripts/GunController.cs" />
      <Compile Include="Assets/Scripts/PlayerSripts/PlayerController.cs" />
+     <Compile Include="Assets/FlipHorizontally.cs" />
+     <Compile Include="Assets/Scripts/EnemyScripts/EnemyGFX.cs" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
@@ -343,6 +345,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
         <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+        <HintPath>/Users/andrii_bartis/GAMES/unity_games/Bullet_Survive/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
         <HintPath>/Applications/Unity/Hub/Editor/2022.1.20f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -898,6 +903,18 @@
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{6e77624f-7bf4-fe47-d3f3-51b4b8d1b7fb}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{0af67f4f-61cb-7082-563c-ff5d2a4dd08d}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{c373145c-c8ba-12e6-1aab-d0e518a932a0}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{99553261-3fd3-5f10-93ad-da2ebf843cc4}</Project>
+      <Name>PackageToolsEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

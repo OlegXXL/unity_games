@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class SpawnerController : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class SpawnerController : MonoBehaviour
                 tempTrash.transform.SetParent(transform);
             } 
         }
+
+        AstarPath.active.Scan();
 
         InvokeRepeating("SpawnEnemy", 0, repeatRate);
     }

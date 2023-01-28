@@ -5,7 +5,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{6e77624f-7bf4-fe47-d3f3-51b4b8d1b7fb}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProject", "AstarPathfindingProject.csproj", "{c373145c-c8ba-12e6-1aab-d0e518a932a0}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{fca13c20-c29d-3303-975c-9e109ca7c051}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProjectEditor", "AstarPathfindingProjectEditor.csproj", "{0af67f4f-61cb-7082-563c-ff5d2a4dd08d}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageToolsEditor", "PackageToolsEditor.csproj", "{99553261-3fd3-5f10-93ad-da2ebf843cc4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,8 +22,14 @@ Global
 		{6fbf7578-85df-b892-efb8-45d23ab48024}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6e77624f-7bf4-fe47-d3f3-51b4b8d1b7fb}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6e77624f-7bf4-fe47-d3f3-51b4b8d1b7fb}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{c373145c-c8ba-12e6-1aab-d0e518a932a0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{c373145c-c8ba-12e6-1aab-d0e518a932a0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{fca13c20-c29d-3303-975c-9e109ca7c051}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{fca13c20-c29d-3303-975c-9e109ca7c051}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0af67f4f-61cb-7082-563c-ff5d2a4dd08d}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0af67f4f-61cb-7082-563c-ff5d2a4dd08d}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99553261-3fd3-5f10-93ad-da2ebf843cc4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99553261-3fd3-5f10-93ad-da2ebf843cc4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

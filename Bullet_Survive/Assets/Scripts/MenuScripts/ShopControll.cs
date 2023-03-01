@@ -9,6 +9,7 @@ public class ShopControll : MonoBehaviour
 {
     //[SerializeField] List<GameObject> coin_btns = new List<GameObject>();
     public CurrencyControll currencyControll;
+    public MenuControll menuControll;
 
 
     /*private int count_coins;
@@ -37,13 +38,13 @@ public class ShopControll : MonoBehaviour
     public void BuyCoins(int price)
     {
         int count = price * 10;
-        Debug.Log("Add Buy Coins");
         int current_crystal = GameData.Crystal;
         if (price <= current_crystal)
         {
             GameData.Crystal -= price;
             GameData.Gold += count;
             currencyControll.UpdateTextUI();
-        }
+            menuControll.PlayParticle_Coins();
+}
     }
 }

@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\MenuScripts\CurrencyControll.cs" />
+    <Compile Include="Assets\Scripts\MenuScripts\LevelManager.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\Scripts\ProgressBar\ProgressBarController.cs" />
@@ -73,13 +74,13 @@
     <Compile Include="Assets\Scripts\EnemyScripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Advertisement\AdsListener.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\GameData.cs" />
+    <Compile Include="Assets\Scripts\EnergyControll.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Scripts\MenuScripts\SwipeLevels.cs" />
     <Compile Include="Assets\Scripts\ResultGame.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Scripts\PlayerSripts\GunController.cs" />
     <Compile Include="Assets\Scripts\PlayerSripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\MenuScripts\LevelManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

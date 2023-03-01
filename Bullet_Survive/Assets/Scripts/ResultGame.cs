@@ -77,5 +77,18 @@ public class ResultGame : MonoBehaviour
     {
         SetStatistic(timeFinished, killCount, coinCount);
         ResultStatus(status);
+    } 
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+    public void RestartLevel()
+    {
+        if (GameData.Energy >= 15)
+        {
+            GameData.Energy -= 15;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 }

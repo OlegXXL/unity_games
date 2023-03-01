@@ -16,7 +16,7 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         LoadLevelStatus();
-        for (int i = 0; i < contetntLevels.transform.childCount; i++)
+        for (int i = 0; i < levels.Length; i++)
         {
             if (i < UnityEditor.EditorBuildSettings.scenes.Length - 1)
             {

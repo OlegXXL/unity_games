@@ -55,14 +55,25 @@ public class MenuControll : MonoBehaviour
 
     private void LoadLevel()
     {
-        animatorLoadScene.SetActive(true);
-        StartCoroutine(LoadLevelCourotine());
+        if(GameData.Energy >= 15)
+        {
+            GameData.Energy -= 15;
+            animatorLoadScene.SetActive(true);
+            StartCoroutine(LoadLevelCourotine());
+        }
+        
     }
     IEnumerator LoadLevelCourotine()
     {
         animatorLoadScene.GetComponent<Animator>().SetTrigger("OpenLoadTrigger");
         yield return new WaitForSeconds(0.8f);
-        SceneManager.LoadScene(1);
+        Debug.Log((int)GameData.CurrentLevel + 1 + 1000);
+        SceneManager.LoadScene((int)GameData.CurrentLevel + 1);
+    }
+    public void PlayParticle_Coins()
+    {
+        gold_prtc.gameObject.SetActive(true);
+        gold_prtc.Play();
     }
     public void PlayParticle_Crystal()
     {
@@ -175,6 +186,7 @@ public class MenuControll : MonoBehaviour
     }
     private void SelectLevel()
     {
+
         swipeLevels.GetSelectedLevel();
         int currentLevelNumber = GameData.CurrentLevel;
         Debug.Log(currentLevelNumber);

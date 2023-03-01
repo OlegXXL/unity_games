@@ -9,18 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 1e718167d5947b64cb6d34dc2fe50498
   - enabled: 1
-    path: Assets/Scenes/Level.unity
-    guid: caa371e436afc4b55885303a287eb460
-  - enabled: 1
     path: Assets/Scenes/TestForAnimation.unity
     guid: 6f2f971fdb9517f42b84220dc45a2c08
   - enabled: 1
-    path: Assets/Scenes/TestScenesdaf.unity
+    path: Assets/Scenes/ThrachSceneForDelete/TestScenesdaf.unity
     guid: d3bca2f1996847641a09842f6ca7b1c6
   - enabled: 1
-    path: Assets/Scenes/TestScenesdaf 1.unity
+    path: Assets/Scenes/ThrachSceneForDelete/TestScenesdaf 1.unity
     guid: 707a1794dc341de47b236ebab63060be
   - enabled: 1
-    path: Assets/Scenes/TestScenesdaf 2.unity
+    path: Assets/Scenes/ThrachSceneForDelete/TestScenesdaf 2.unity
     guid: 16701b94f7b659b4bbbe0f4ac1bb053b
+  - enabled: 1
+    path: Assets/Scenes/ThrachSceneForDelete/TestScenesdaf 3.unity
+    guid: d049f58383ca2274db4074484869cd62
+  - enabled: 1
+    path: Assets/Scenes/Level.unity
+    guid: caa371e436afc4b55885303a287eb460
   m_configObjects: {}

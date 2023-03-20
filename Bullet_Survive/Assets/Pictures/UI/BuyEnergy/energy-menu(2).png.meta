@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: baca44f80c410194784233aaaa6a6e6b
+guid: 548ed7214fe6db94e9d01ae1331f9a16
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -131,13 +131,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: buy-coin13_0
+      name: energy-menu(2)_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 0
-        width: 594
-        height: 852
+        x: 108
+        y: 2362
+        width: 300
+        height: 259
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +145,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b126d9be82a032b41920ee0ab704134e
-      internalID: -826979159
+      spriteID: 7470647484e2a0e428a33c6f37bd6269
+      internalID: 862127170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy-menu(2)_1
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 1933
+        width: 202
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd4d6efef0c55143a08cbedd10b245c
+      internalID: -106721592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy-menu(2)_2
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 1702
+        width: 575
+        height: 797
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c8559edd00c6546a837d08bd29a53e
+      internalID: 2042867077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy-menu(2)_3
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 1628
+        width: 125
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d476ea9ef294f984eb92f6bc8a004dd1
+      internalID: 1964401880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy-menu(2)_4
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 1363
+        width: 94
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f1c3e3062e5b6c47b04f2d567d16b53
+      internalID: -100532107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy-menu(2)_5
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 1301
+        width: 450
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76505a4c64f9de3419aa303449dd261f
+      internalID: -1551429956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy-menu(2)_6
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 1310
+        height: 1085
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b70cf217f373a48a35bb7a2d9d8fc9
+      internalID: -934658670
       vertices: []
       indices: 
       edges: []
@@ -162,7 +288,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      buy-coin13_0: -826979159
+      energy-menu(2)_1: -1523265414
+      energy-menu(2)_3: 1767592544
+      energy-menu(2)_4: -1746378513
+      energy-menu(2)_0: -844360571
+      energy-menu(2)_5: 1192703370
+      energy-menu(2)_6: 958296082
+      energy-menu(2)_2: 1921504820
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

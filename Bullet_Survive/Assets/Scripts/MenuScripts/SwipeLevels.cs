@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+//using UnityEngine.UIElements;
 
 public class SwipeLevels : MonoBehaviour
 {
+    [SerializeField] GameObject select_btn;
+    [SerializeField] LevelManager levelManager;
     public Color[] colors;
     public GameObject scrollbar, imageContent;
     private float scroll_pos = 0;
@@ -63,6 +66,7 @@ public class SwipeLevels : MonoBehaviour
             {
                 Debug.LogWarning("Current Selected Level" + i);
                 currentSelectedLevel = i;
+                Debug.Log(imageContent.transform.GetChild(i).name);
                 transform.GetChild(i).localScale = Vector2.Lerp(transform.GetChild(i).localScale, new Vector2(1f, 1f), 0.1f);
                 imageContent.transform.GetChild(i).localScale = Vector2.Lerp(imageContent.transform.GetChild(i).localScale, new Vector2(1.2f, 1.2f), 0.1f);
                 imageContent.transform.GetChild(i).GetComponent<Image>().color = colors[1];
@@ -77,7 +81,14 @@ public class SwipeLevels : MonoBehaviour
                 }
             }
         }
-
+        if (levelManager.IsLevelUnlocked(currentSelectedLevel))
+        {
+            select_btn.GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            select_btn.GetComponent<Button>().interactable = false;
+        }
 
     }
     public void GetSelectedLevel()

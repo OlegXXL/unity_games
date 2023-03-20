@@ -24,6 +24,11 @@ public class MenuControll : MonoBehaviour
     [SerializeField] private GameObject energy_UI;
     [SerializeField] private GameObject selectedLevel_UI;
 
+    [Header("Buttons Up Panel")]
+    [SerializeField] private Button energy_btn;
+    [SerializeField] private Button crystal_btn;
+    [SerializeField] private Button gold_btn;
+
     [Header("ButtonsMenu")]
     [SerializeField] private Button shop_btn;
     [SerializeField] private Button home_btn;
@@ -50,14 +55,25 @@ public class MenuControll : MonoBehaviour
 
     private void LoadLevel()
     {
-        animatorLoadScene.SetActive(true);
-        StartCoroutine(LoadLevelCourotine());
+        if(GameData.Energy >= 15)
+        {
+            GameData.Energy -= 15;
+            animatorLoadScene.SetActive(true);
+            StartCoroutine(LoadLevelCourotine());
+        }
+        
     }
     IEnumerator LoadLevelCourotine()
     {
         animatorLoadScene.GetComponent<Animator>().SetTrigger("OpenLoadTrigger");
         yield return new WaitForSeconds(0.8f);
-        SceneManager.LoadScene(1);
+        Debug.Log((int)GameData.CurrentLevel + 1 + 1000);
+        SceneManager.LoadScene((int)GameData.CurrentLevel + 1);
+    }
+    public void PlayParticle_Coins()
+    {
+        gold_prtc.gameObject.SetActive(true);
+        gold_prtc.Play();
     }
     public void PlayParticle_Crystal()
     {
@@ -72,6 +88,16 @@ public class MenuControll : MonoBehaviour
     private void Start()
     {
         #region [ Button Settings ]
+        energy_btn.onClick.RemoveAllListeners();
+        energy_btn.onClick.AddListener(SelectLevel);
+
+        crystal_btn.onClick.RemoveAllListeners();
+        crystal_btn.onClick.AddListener(delegate { currentStatus = StatusMenu.inShop; });
+        crystal_btn.onClick.AddListener(updateStatusMenu);
+
+        gold_btn.onClick.RemoveAllListeners();
+        gold_btn.onClick.AddListener(delegate { currentStatus = StatusMenu.inShop; });
+        gold_btn.onClick.AddListener(updateStatusMenu);
 
         selectLevel_btn.onClick.RemoveAllListeners();
         selectLevel_btn.onClick.AddListener(SelectLevel);
@@ -160,8 +186,10 @@ public class MenuControll : MonoBehaviour
     }
     private void SelectLevel()
     {
+
         swipeLevels.GetSelectedLevel();
         int currentLevelNumber = GameData.CurrentLevel;
+        Debug.Log(currentLevelNumber);
         iconLevel_btn.GetComponent<Image>().sprite = ContentWithLevels.transform.GetChild(currentLevelNumber).GetComponent<Image>().sprite;
         selectedLevel_UI.SetActive(false);
     }

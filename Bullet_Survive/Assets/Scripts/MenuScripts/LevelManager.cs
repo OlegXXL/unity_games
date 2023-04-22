@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] int[] levels;
     [SerializeField] GameObject contetntLevels;
     private List<GameObject> statusLocks = new List<GameObject>();
+
     private void Awake()
     {
         UpdateListLevel();
@@ -18,7 +19,7 @@ public class LevelManager : MonoBehaviour
         LoadLevelStatus();
         for (int i = 0; i < levels.Length; i++)
         {
-            if (i < UnityEditor.EditorBuildSettings.scenes.Length - 1)
+            if (i < 4)
             {
                 Debug.Log(i);
                 if (levels[i] == 1)
@@ -61,34 +62,8 @@ public class LevelManager : MonoBehaviour
             {
                 levels[i] = i == 0 ? 1 : 0;
             }
-            SaveLevelStatus();
+            GameData.SaveLevelStatus();
         }
     }
 
-    private void SaveLevelStatus()
-    {
-        string levelData = "";
-        for (int i = 0; i < levels.Length; i++)
-        {
-            levelData += levels[i] + " ";
-        }
-        File.WriteAllText(Application.persistentDataPath + "/levelStatus.txt", levelData);
-    }
-
-    public void UnlockLevel(int level)
-    {
-        levels[level] = 1;
-        SaveLevelStatus();
-    }
-
-    public void LockLevel(int level)
-    {
-        levels[level] = 0;
-        SaveLevelStatus();
-    }
-
-    public bool IsLevelUnlocked(int level)
-    {
-        return levels[level] == 1;
-    }
 }

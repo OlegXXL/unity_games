@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
-using UnityEngine.WSA;
 
 public class GunController : MonoBehaviour
 {
@@ -48,7 +47,7 @@ public class GunController : MonoBehaviour
     }
 
     void Shoot()
-    {
+    {   
         var bullet = Instantiate(this.bullet, transform.position, Quaternion.identity);
         bullet.transform.right = transform.right;
     }

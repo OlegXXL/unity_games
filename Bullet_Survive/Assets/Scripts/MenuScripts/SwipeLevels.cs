@@ -8,6 +8,8 @@ public class SwipeLevels : MonoBehaviour
 {
     [SerializeField] GameObject select_btn;
     [SerializeField] LevelManager levelManager;
+    [SerializeField] Text levelName_txt;
+    [SerializeField] List<string> levelNames_txt;
     public Color[] colors;
     public GameObject scrollbar, imageContent;
     private float scroll_pos = 0;
@@ -17,6 +19,7 @@ public class SwipeLevels : MonoBehaviour
     private Button takeTheBtn;
     int btnNumber;
     private int currentSelectedLevel;
+    
     private void Awake()
     {
         currentSelectedLevel = GameData.CurrentLevel;
@@ -64,9 +67,18 @@ public class SwipeLevels : MonoBehaviour
         {
             if (scroll_pos < pos[i] + (distance / 2) && scroll_pos > pos[i] - (distance / 2))
             {
-                Debug.LogWarning("Current Selected Level" + i);
                 currentSelectedLevel = i;
-                Debug.Log(imageContent.transform.GetChild(i).name);
+                GameData.CurrentLevel = i;
+                Debug.Log("Current Selected Level: " + GameData.CurrentLevel);
+                try
+                {
+                    levelName_txt.text = levelNames_txt[i];
+                }
+                catch
+                {
+                    levelName_txt.text = $"{i + 1}. Noname";
+                }
+                
                 transform.GetChild(i).localScale = Vector2.Lerp(transform.GetChild(i).localScale, new Vector2(1f, 1f), 0.1f);
                 imageContent.transform.GetChild(i).localScale = Vector2.Lerp(imageContent.transform.GetChild(i).localScale, new Vector2(1.2f, 1.2f), 0.1f);
                 imageContent.transform.GetChild(i).GetComponent<Image>().color = colors[1];
@@ -81,7 +93,7 @@ public class SwipeLevels : MonoBehaviour
                 }
             }
         }
-        if (levelManager.IsLevelUnlocked(currentSelectedLevel))
+        if (GameData.IsLevelUnlocked(currentSelectedLevel))
         {
             select_btn.GetComponent<Button>().interactable = true;
         }

@@ -25,7 +25,7 @@ public class ResultGame : MonoBehaviour
     private void Start()
     {
         panelEndLevel.SetActive(false);
-        GameFinish("win", "3:55", 20488, 85);
+
     }
     private void ResultStatus(string status)    // status is win or lose
     {
@@ -38,7 +38,7 @@ public class ResultGame : MonoBehaviour
             circleBack.GetComponent<Image>().sprite = loseCircle;
             playerInCircle.GetComponent<Image>().sprite = losePlayerInCircle;
         }
-
+        
         StartCoroutine(ShowPanelStatistic());
 
     }
@@ -63,6 +63,7 @@ public class ResultGame : MonoBehaviour
             item.transform.DOScale(1f, 0.4f).SetEase(Ease.OutBounce);
             yield return new WaitForSeconds(0.25f);
         }
+        Time.timeScale = 0;
     }
     private void SetStatistic(string timeFinished, int killCount, int coinCount)
     {
@@ -90,5 +91,6 @@ public class ResultGame : MonoBehaviour
             GameData.Energy -= 15;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        else EnergyPanel.GetBuyEnergyPanel();
     }
 }

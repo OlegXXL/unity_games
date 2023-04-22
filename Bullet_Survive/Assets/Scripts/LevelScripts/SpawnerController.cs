@@ -8,10 +8,14 @@ public class SpawnerController : MonoBehaviour
     [SerializeField] private GameObject[] trash;
     [SerializeField] private int[] trashCount;
     [SerializeField] private GameObject enemy;
-    [SerializeField] private float repeatRate;
+    [SerializeField] private float repeatRate = 1.6f;
     [SerializeField] private GameObject boss;
     void Start()
     {
+        SpawnEnemy();
+        SpawnEnemy();
+        SpawnEnemy();
+        SpawnEnemy();
         Vector3 position;
         GameObject trashForSpawn;
         
@@ -45,7 +49,15 @@ public class SpawnerController : MonoBehaviour
     {
         var position = new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f));
         var tempBoss = Instantiate(boss, position, Quaternion.identity);
-        tempBoss.transform.SetParent(transform); 
+        tempBoss.transform.SetParent(transform);
+        tempBoss.GetComponent<AIDestinationSetter>().target = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Transform>();
+
+        // Find the BossIndicator script and call FindBoss
+        BossIndicator bossIndicator = FindObjectOfType<BossIndicator>();
+        if (bossIndicator != null)
+        {
+            bossIndicator.FindBoss();
+        }
     }
     void SpawnEnemy()
     {
@@ -54,5 +66,6 @@ public class SpawnerController : MonoBehaviour
         var position = new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f));
         var tempEnemy = Instantiate(enemy, position, Quaternion.identity);
         tempEnemy.transform.SetParent(transform);
+        tempEnemy.GetComponent<AIDestinationSetter>().target = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Transform>();
     }
 }

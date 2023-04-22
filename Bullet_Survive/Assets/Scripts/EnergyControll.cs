@@ -47,6 +47,7 @@ public class EnergyControll : MonoBehaviour
 
     private void Update()
     {
+        currentEnergy = GameData.Energy;
         if (currentEnergy < maxEnergy)
         {
             timeSinceLastEnergy += Time.deltaTime;
@@ -58,6 +59,7 @@ public class EnergyControll : MonoBehaviour
         }
         else
         {
+            
             energy_txt.text = string.Format("{0}/{1}", currentEnergy, maxEnergy);
             energyTimer_txt.text = "00:00";
         }

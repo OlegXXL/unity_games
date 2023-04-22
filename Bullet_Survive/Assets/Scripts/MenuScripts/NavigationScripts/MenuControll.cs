@@ -61,6 +61,10 @@ public class MenuControll : MonoBehaviour
             animatorLoadScene.SetActive(true);
             StartCoroutine(LoadLevelCourotine());
         }
+        else
+        {
+            Debug.Log("NON ENERGY!");
+        }
         
     }
     IEnumerator LoadLevelCourotine()
@@ -84,12 +88,14 @@ public class MenuControll : MonoBehaviour
     {
         currentStatus = StatusMenu.inHome;
         updateStatusMenu();
+        Time.timeScale = 1;
     }
+    
     private void Start()
     {
         #region [ Button Settings ]
         energy_btn.onClick.RemoveAllListeners();
-        energy_btn.onClick.AddListener(SelectLevel);
+        energy_btn.onClick.AddListener(EnergyPanel.GetBuyEnergyPanel);
 
         crystal_btn.onClick.RemoveAllListeners();
         crystal_btn.onClick.AddListener(delegate { currentStatus = StatusMenu.inShop; });
@@ -118,11 +124,11 @@ public class MenuControll : MonoBehaviour
 
         third_btn.onClick.RemoveAllListeners();
         third_btn.onClick.AddListener(delegate { currentStatus = StatusMenu.inThird; });
-        third_btn.onClick.AddListener(updateStatusMenu);
+        third_btn.onClick.AddListener(LockedsButtons);
 
         four_btn.onClick.RemoveAllListeners();
         four_btn.onClick.AddListener(delegate { currentStatus = StatusMenu.inFour; });
-        four_btn.onClick.AddListener(updateStatusMenu);
+        four_btn.onClick.AddListener(LockedsButtons);
 
         start_btn.onClick.RemoveAllListeners();
         start_btn.onClick.AddListener(LoadLevel);
@@ -138,6 +144,21 @@ public class MenuControll : MonoBehaviour
         mySequence.Append(icon_btn.transform.DORotate(new Vector3(0f, 0f, 0f), 0.2f));
         mySequence.Append(icon_btn.transform.DOScale(1f, 0.2f));
         mySequence.Play();
+    }
+    private void LockedsButtons()
+    {
+        switch (currentStatus)
+        {
+            case StatusMenu.inThird: 
+                AnimationButtonIcon(thirdIcon);
+                Debug.Log("hi3");
+                break;
+            case StatusMenu.inFour:
+                AnimationButtonIcon(fourIcon);
+                Debug.Log("hi4");
+                break;
+
+        }
     }
     private void updateStatusMenu()
     {
@@ -160,19 +181,6 @@ public class MenuControll : MonoBehaviour
                 AnimationButtonIcon(shopIcon);
                 Debug.Log("hi2");
                 break;
-            case StatusMenu.inThird: //if press button shop
-                third_btn.GetComponent<Image>().sprite = backgroundActiveBtn;
-                //shop_UI.SetActive(true);
-                AnimationButtonIcon(thirdIcon);
-                Debug.Log("hi2");
-                break;
-            case StatusMenu.inFour: //if press button shop
-                four_btn.GetComponent<Image>().sprite = backgroundActiveBtn;
-                //shop_UI.SetActive(true);
-                AnimationButtonIcon(fourIcon);
-                Debug.Log("hi2");
-                break;
-
         }
 
     }

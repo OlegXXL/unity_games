@@ -23,7 +23,8 @@ public class EnemyController : MonoBehaviour
         
         if (health > 0) return;
         PlayerPrefs.SetInt("LevelDeathCount", PlayerPrefs.GetInt("LevelDeathCount") + 1);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        //Destroy(gameObject);
     }
 
     private void LateUpdate()

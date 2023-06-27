@@ -83,6 +83,8 @@ public class ResultGame : MonoBehaviour
     public void LoadMenu()
     {
         SceneManager.LoadScene(0);
+        if(InterstitialAd.instance != null)
+            InterstitialAd.instance.ShowAd();
     }
     public void RestartLevel()
     {

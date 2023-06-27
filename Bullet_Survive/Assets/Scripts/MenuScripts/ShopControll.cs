@@ -44,6 +44,6 @@ public class ShopControll : MonoBehaviour
             GameData.Gold += count;
             currencyControll.UpdateTextUI();
             menuControll.PlayParticle_Coins();
-}
+        }
     }
 }

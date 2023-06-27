@@ -5,7 +5,7 @@ using UnityEngine;
 public class ProgressBarController : MonoBehaviour
 {
     public static float progress = 0;
-    [SerializeField] private float endTime = 35;
+    [SerializeField] private float endTime = 60;
     [SerializeField] private float maxWidth = 670;
     private RectTransform line;
 

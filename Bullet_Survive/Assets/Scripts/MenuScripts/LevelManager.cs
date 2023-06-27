@@ -6,30 +6,45 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] int[] levels;
-    [SerializeField] GameObject contetntLevels;
+    public static LevelManager instance;
+
+    [SerializeField] private GameObject contetntLevels;
     private List<GameObject> statusLocks = new List<GameObject>();
+    private int currentUnlockedLevel;
 
     private void Awake()
     {
-        UpdateListLevel();
+        if (instance == null)
+            instance = this;
+        currentUnlockedLevel = PlayerPrefs.GetInt("UnlockedLevel");
+        if (PlayerPrefs.HasKey("FirstOnGame") == false)
+        {
+            PlayerPrefs.SetInt("FirstOnGame", 1);
+            PlayerPrefs.SetInt($"UnlockedLevel", 1);
+            UpdateListLevel();
+        }
+        else
+        {            
+            UpdateListLevel();
+        }
+        
     }
     private void Start()
     {
-        LoadLevelStatus();
-        for (int i = 0; i < levels.Length; i++)
+        
+    }
+    private void SetAllBckStatus()
+    {
+        for (int i = 0; i < contetntLevels.transform.childCount; i++)
         {
-            if (i < 4)
+            Debug.Log(i);
+            if (i <= currentUnlockedLevel)
             {
-                Debug.Log(i);
-                if (levels[i] == 1)
-                {
-                    statusLocks[i].SetActive(false);
-                }
-                else
-                {
-                    statusLocks[i].SetActive(true);
-                }
+                statusLocks[i].SetActive(false);
+            }
+            else
+            {
+                statusLocks[i].SetActive(true);
             }
         }
     }
@@ -38,32 +53,9 @@ public class LevelManager : MonoBehaviour
         for (int i = 0; i < contetntLevels.transform.childCount; i++)
         {
             contetntLevels.transform.GetChild(i).transform.GetChild(0).gameObject.SetActive(true);
-            statusLocks.Add(contetntLevels.transform.GetChild(i).transform.GetChild(0).gameObject);
+            statusLocks.Add(contetntLevels.transform.GetChild(i).transform.GetChild(0).gameObject);                     
         }
-    }
-
-    private void LoadLevelStatus()
-    {
-        string path = Application.persistentDataPath + "/levelStatus.txt";
-        if (File.Exists(path))
-        {
-            string levelData = File.ReadAllText(path);
-            string[] levelDataArray = levelData.Split(' ');
-
-            for (int i = 0; i < levels.Length; i++)
-            {
-                levels[i] = int.Parse(levelDataArray[i]);
-            }
-        }
-        else
-        {
-            levels = new int[levels.Length];
-            for (int i = 0; i < levels.Length; i++)
-            {
-                levels[i] = i == 0 ? 1 : 0;
-            }
-            GameData.SaveLevelStatus();
-        }
+        SetAllBckStatus();
     }
 
 }

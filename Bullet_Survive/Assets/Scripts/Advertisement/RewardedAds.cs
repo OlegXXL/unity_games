@@ -3,16 +3,17 @@ using UnityEngine.Advertisements;
 
 public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
 {
-    public static RewardedAds S;
+    public static RewardedAds instance;
 
-    [SerializeField] private string _androidAdUnitId = "Rewarded_Android";
-    [SerializeField] private string _iOSAdUnitId = "Rewarded_iOS";
+    private string _androidAdUnitId = "Rewarded_Android";
+    private string _iOSAdUnitId = "Rewarded_iOS";
 
     private string _adUnitId;
 
     void Awake()
     {
-        S = this;
+        if (instance == null)
+            instance = this;
 
         // Get the Ad Unit ID for the current platform:
         _adUnitId = (Application.platform == RuntimePlatform.IPhonePlayer)
@@ -20,10 +21,19 @@ public class RewardedAds : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
             : _androidAdUnitId;
     }
 
+    private void Start()
+    {
+        if (Advertisement.isInitialized)
+            LoadAd();
+        else
+            AdsInitializer.OnAdInitialized += LoadAd; // subscribe to the event
+    }
+
     // Load content to the Ad Unit:
     public void LoadAd()
     {
-        // IMPORTANT! Only load content AFTER initialization (in this example, initialization is handled in a different script).
+        AdsInitializer.OnAdInitialized -= LoadAd;
+
         Debug.Log("Loading Ad: " + _adUnitId);
         Advertisement.Load(_adUnitId, this);
     }

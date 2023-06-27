@@ -97,6 +97,6 @@ public class EnergyControll : MonoBehaviour
         energy_txt.text = string.Format("{0}/{1}", currentEnergy, maxEnergy);
         energyTimer_txt.text = energyTimer;
 
-        Debug.Log("Energy timer: " + energyTimer);
+        //Debug.Log("Energy timer: " + energyTimer);
     }
 }

@@ -6,9 +6,9 @@ using UnityEngine.VFX;
 
 public class GunController : MonoBehaviour
 {
-    [SerializeField] private float overchargeTime = 1;
+    [SerializeField] private float overchargeTime = 0.6f;
     [SerializeField] private float damage = 10;
-    [SerializeField] private float rotationSpeed = 1;
+    [SerializeField] private float rotationSpeed = 0.6f;
     [SerializeField] private GameObject bullet;
     private List<GameObject> enemies;
 
@@ -50,5 +50,7 @@ public class GunController : MonoBehaviour
     {   
         var bullet = Instantiate(this.bullet, transform.position, Quaternion.identity);
         bullet.transform.right = transform.right;
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayShootSound();
     }
 }

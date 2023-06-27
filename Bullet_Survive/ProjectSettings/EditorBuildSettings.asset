@@ -9,12 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 1e718167d5947b64cb6d34dc2fe50498
   - enabled: 1
-    path: Assets/Scenes/Grass.unity
+    path: Assets/Scenes/1.unity
     guid: caa371e436afc4b55885303a287eb460
   - enabled: 1
-    path: Assets/Scenes/City.unity
+    path: Assets/Scenes/2.unity
     guid: e059f2e2f758d46a689b1399b867b8ce
   - enabled: 1
-    path: Assets/Scenes/Farm.unity
+    path: Assets/Scenes/3.unity
     guid: fc373696f15904a83860ce84c2b53e30
+  - enabled: 1
+    path: Assets/Scenes/4.unity
+    guid: e96a64eac35c629419a68e6e0d11887f
+  - enabled: 1
+    path: Assets/Scenes/5.unity
+    guid: 1db1e7708919a3a4b8b1c91e94503f4a
+  - enabled: 1
+    path: Assets/Scenes/6.unity
+    guid: 4495b986f1b8caa438e315adcfcfb316
   m_configObjects: {}

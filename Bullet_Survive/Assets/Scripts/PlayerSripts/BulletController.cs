@@ -6,8 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(CircleCollider2D))]
 public class BulletController : MonoBehaviour
 {
-    public float spead;
-    public float damage;
+    public float spead = 5;
+    public float damage = 80;
 
     private void Start()
     {

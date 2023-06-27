@@ -93,14 +93,25 @@ public class SwipeLevels : MonoBehaviour
                 }
             }
         }
-        if (GameData.IsLevelUnlocked(currentSelectedLevel))
+        try
         {
-            select_btn.GetComponent<Button>().interactable = true;
+            if (currentSelectedLevel <= PlayerPrefs.GetInt("UnlockedLevel"))
+            {
+                Debug.Log(currentSelectedLevel);
+                select_btn.GetComponent<Button>().interactable = true;
+            }
+            else
+            {
+                Debug.Log(currentSelectedLevel);
+                select_btn.GetComponent<Button>().interactable = false;
+            }
         }
-        else
+        catch
         {
+            Debug.LogError("CURET LEVEL NOT FOUND!!!");
             select_btn.GetComponent<Button>().interactable = false;
         }
+        
 
     }
     public void GetSelectedLevel()

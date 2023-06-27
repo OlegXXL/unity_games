@@ -9,7 +9,7 @@ public class BossHealthBar : MonoBehaviour
     public EnemyController boss;
     private RectTransform line;
     [SerializeField] private ResultGame _resultGame;
-
+    private int curentLevel;
     void Start()
     {
         line = GameObject.Find("BossHealthLine").GetComponent<RectTransform>();
@@ -32,7 +32,9 @@ public class BossHealthBar : MonoBehaviour
             {
                 a = false;
                 _resultGame.GameFinish("win", "1:25", 8, 100);
-                GameData.Levels = SceneManager.GetActiveScene().buildIndex;
+                curentLevel = int.Parse(SceneManager.GetActiveScene().name);
+                if(curentLevel > PlayerPrefs.GetInt("UnlockedLevel"))
+                    PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel") + 1);
                 Debug.Log("COMPLETEEEEEE");
             }
         }

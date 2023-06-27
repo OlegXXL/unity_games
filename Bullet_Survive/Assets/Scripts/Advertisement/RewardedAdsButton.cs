@@ -5,70 +5,64 @@ using UnityEngine.Advertisements;
 
 public class RewardedAdsButton : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
 {
+    public static RewardedAdsButton instance;
     [SerializeField] private Button _showAdButton;
 
-    [SerializeField] private string _androidAdUnitId = "Reward_Finish_id";
-    [SerializeField] private string _iOSAdUnitId = "Rewarded_iOS";
+    private string _androidAdUnitId = "Rewarded_Android";
+    private string _iOSAdUnitId = "Rewarded_iOS";
 
     private string _adUnitId;
 
     private void Awake()
     {
+        if (instance == null)
+            instance = this;
         // Get the Ad Unit ID for the current platform:
         _adUnitId = (Application.platform == RuntimePlatform.IPhonePlayer)
             ? _iOSAdUnitId
             : _androidAdUnitId;
 
         //Disable button until ad is ready to show
-        _showAdButton.interactable = false;
+        if(_showAdButton != null)
+            _showAdButton.interactable = false;
         Debug.Log($"{_adUnitId}  ADS ID ANDROID");
     }
 
-    //private void Start()
-    //{
-    //    LoadAd();
-    //}
-
     private void Start()
     {
-        StartCoroutine(LoadAdRewarded());
+        if (Advertisement.isInitialized)
+            LoadAd();
+        else
+            AdsInitializer.OnAdInitialized += LoadAd; // subscribe to the event
     }
 
-    private IEnumerator LoadAdRewarded()
-    {
-        yield return new WaitForSeconds(1f);
-        LoadAd();
-    }
 
-    // Load content to the Ad Unit:
     public void LoadAd()
     {
-        // IMPORTANT! Only load content AFTER initialization (in this example, initialization is handled in a different script).
+        AdsInitializer.OnAdInitialized -= LoadAd;
         Debug.Log("Loading Ad: " + _adUnitId);
         Advertisement.Load(_adUnitId, this);
     }
 
-    // If the ad successfully loads, add a listener to the button and enable it:
+
     public void OnUnityAdsAdLoaded(string adUnitId)
     {
         Debug.Log("Ad Button was Loaded: " + adUnitId);
 
         if (adUnitId.Equals(_adUnitId))
         {
-            // Configure the button to call the ShowAd() method when clicked:
+
             _showAdButton.onClick.AddListener(ShowAd);
-            // Enable the button for users to click:
+
             _showAdButton.interactable = true;
         }
     }
 
-    // Implement a method to execute when the user clicks the button.
+
     public void ShowAd()
     {
         Debug.Log("ShowAd() called");
-        // Disable the button: 
         _showAdButton.interactable = false;
-        // Then show the ad:
         Advertisement.Show(_adUnitId, this);
     }
 

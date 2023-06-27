@@ -51,10 +51,12 @@ public class AudioManager : MonoBehaviour
     {
         if (sceneName == "MainMenu")
         {
+            musicSource.volume = musicVolume;
             musicSource.clip = mainMenuMusic;
         }
         else
         {
+            musicSource.volume = musicVolume - 0.4f;
             musicSource.clip = gameMusic;
         }
 

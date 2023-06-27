@@ -15,6 +15,8 @@ enum StatusMenu
 }
 public class MenuControll : MonoBehaviour
 {
+    public static MenuControll instance;
+
     public SwipeLevels swipeLevels;
     [SerializeField] private GameObject ContentWithLevels; //for find child image
 
@@ -86,6 +88,8 @@ public class MenuControll : MonoBehaviour
     }
     private void Awake()
     {
+        if (instance == null)
+            instance = this;
         currentStatus = StatusMenu.inHome;
         updateStatusMenu();
         Time.timeScale = 1;

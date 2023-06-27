@@ -3,14 +3,27 @@ using UnityEngine.Advertisements;
 
 public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
 {
-    [SerializeField] private string _androidGameId;
-    [SerializeField] private string _iOSGameId;
-    [SerializeField] private bool _testMode = true;
+    public static AdsInitializer instance;
+
+    // Define a delegate type and an event of that type
+    public delegate void AdInitializedDelegate();
+    public static event AdInitializedDelegate OnAdInitialized;
+
+    private const string _androidGameId = "5086707";
+    private const string _iOSGameId = "5086706";
+    private bool _testMode = true;
 
     private string _gameId;
 
     void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+            Destroy(gameObject);
         InitializeAds();
     }
 
@@ -26,6 +39,9 @@ public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
     public void OnInitializationComplete()
     {
         Debug.Log("Unity Ads initialization complete.");
+
+        // Call the event when initialization is complete
+        OnAdInitialized?.Invoke();
     }
 
     public void OnInitializationFailed(UnityAdsInitializationError error, string message)

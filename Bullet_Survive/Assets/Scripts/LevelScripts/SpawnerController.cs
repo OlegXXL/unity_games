@@ -7,15 +7,42 @@ public class SpawnerController : MonoBehaviour
 {
     [SerializeField] private GameObject[] trash;
     [SerializeField] private int[] trashCount;
-    [SerializeField] private GameObject enemy;
-    [SerializeField] private float repeatRate = 1.6f;
+    [SerializeField] private GameObject[] enemies; // An array of enemies to spawn
+    [SerializeField] private float[] spawnProbabilities; // The spawn probability for each enemy
+    [SerializeField] private float repeatRate = 0.8f;
     [SerializeField] private GameObject boss;
     void Start()
     {
-        SpawnEnemy();
-        SpawnEnemy();
-        SpawnEnemy();
-        SpawnEnemy();
+        // Ensure that the arrays are the same length
+        if (enemies.Length != spawnProbabilities.Length)
+        {
+            Debug.LogWarning("The enemies and spawnProbabilities arrays are not the same length. Assigning equal probabilities to all enemies.");
+            spawnProbabilities = new float[enemies.Length];
+            for (int i = 0; i < spawnProbabilities.Length; i++)
+            {
+                spawnProbabilities[i] = 100f / enemies.Length;
+            }
+        }
+
+        // Ensure that the probabilities add up to 100
+        float totalProbability = 0f;
+        foreach (float prob in spawnProbabilities)
+        {
+            totalProbability += prob;
+        }
+
+        if (totalProbability != 100f)
+        {
+            Debug.LogWarning("Spawn probabilities do not add up to 100. Assigning equal probabilities to all enemies.");
+            for (int i = 0; i < spawnProbabilities.Length; i++)
+            {
+                spawnProbabilities[i] = 100f / enemies.Length;
+            }
+        }
+        for (int i = 0; i < 4; i++)
+        {
+            SpawnEnemy();
+        }
         Vector3 position;
         GameObject trashForSpawn;
         
@@ -62,10 +89,38 @@ public class SpawnerController : MonoBehaviour
     void SpawnEnemy()
     {
         if (ProgressBarController.progress >= 100) return;
-        
+
+        // Select a random enemy based on the spawn probabilities
+        GameObject enemyToSpawn = SelectRandomEnemy();
+
         var position = new Vector3(Random.Range(-10f, 10f), Random.Range(-10f, 10f));
-        var tempEnemy = Instantiate(enemy, position, Quaternion.identity);
+        var tempEnemy = Instantiate(enemyToSpawn, position, Quaternion.identity);
         tempEnemy.transform.SetParent(transform);
         tempEnemy.GetComponent<AIDestinationSetter>().target = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Transform>();
+    }
+
+    GameObject SelectRandomEnemy()
+    {
+        float total = 0;
+        foreach (float probability in spawnProbabilities)
+        {
+            total += probability;
+        }
+
+        float randomPoint = Random.value * total;
+
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            if (randomPoint < spawnProbabilities[i])
+            {
+                return enemies[i];
+            }
+            else
+            {
+                randomPoint -= spawnProbabilities[i];
+            }
+        }
+
+        return enemies[enemies.Length - 1]; // If for some reason the selection fails, return the last enemy
     }
 }

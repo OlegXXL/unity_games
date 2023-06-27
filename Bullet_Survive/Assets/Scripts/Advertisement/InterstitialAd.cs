@@ -1,18 +1,20 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Advertisements;
 
 public class InterstitialAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
 {
-    public static InterstitialAd S;
+    public static InterstitialAd instance;
 
-    [SerializeField] private string _androidAdUnitId = "Interstitial_Android";
-    [SerializeField] private string _iOSAdUnitId = "Interstitial_iOS";
+    private string _androidAdUnitId = "Interstitial_Android";
+    private string _iOSAdUnitId = "Interstitial_iOS";
 
     private string _adUnitId;
 
     void Awake()
     {
-        S = this;
+        if (instance == null)
+            instance = this;
 
         // Get the Ad Unit ID for the current platform:
         _adUnitId = (Application.platform == RuntimePlatform.IPhonePlayer)
@@ -21,10 +23,20 @@ public class InterstitialAd : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsSho
         
     }
 
+    private void Start()
+    {
+        if (Advertisement.isInitialized)
+            LoadAd();
+        else
+            AdsInitializer.OnAdInitialized += LoadAd; // subscribe to the event
+    }
+
     // Load content to the Ad Unit:
     public void LoadAd()
     {
-        // IMPORTANT! Only load content AFTER initialization (in this example, initialization is handled in a different script).
+        // unsubscribe from the event to prevent LoadAd() from being called more than once
+        AdsInitializer.OnAdInitialized -= LoadAd;
+
         Debug.Log("Loading Ad: " + _adUnitId);
         Advertisement.Load(_adUnitId, this);
     }

@@ -23,7 +23,10 @@ public static class EnergyPanel
             Button buyByDiamonds_Btn = GameObject.Find("BuyByDiamonds").GetComponent<Button>();
             Button BuyByADS_Btn = GameObject.Find("BuyByADS").GetComponent<Button>();
             Button closePanelBtn = panel.GetComponent<Button>();
-
+            if(RewardedAds.instance!= null)
+            {
+                
+            }
             closePanelBtn.onClick.AddListener(() =>
             {
                 GameObject.Destroy(panel);
